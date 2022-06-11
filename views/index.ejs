@@ -18,12 +18,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Current Rappers</h1>
-    <ul class="rappers">
+    <h1>Current Cartridges</h1>
+    <ul class="cartridges">
     <% for(let i=0; i < info.length; i++) {%>
-        <li class="rapper">
-            <span><%= info[i].stageName %></span>
-            <span><%= info[i].birthName %></span>
+        <li class="cartridge">
+            <span><%= info[i].gunType %> - </span> 
+            <span><%= info[i].cartridgeName %></span>
             <span><%= info[i].likes %></span>
             <span class='fa fa-thumbs-up'></span>
             <span class='fa fa-trash'></span>
@@ -31,11 +31,11 @@
     <% } %>
     </ul>
 
-    <h2>Add A Rapper:</h2>
+    <h2>Add A Cartridge:</h2>
 
-    <form action="/addRapper" method="POST">
-        <input type="text" placeholder="Stage Name" name="stageName">
-        <input type="text" placeholder="Birth Name" name="birthName">
+    <form action="/addCartridge" method="POST">
+        <input type="text" placeholder="Pistol or Rifle?" name="gunType">
+        <input type="text" placeholder="Cartridge Name" name="cartridgeName">
         <input type="submit">
     </form>
     
